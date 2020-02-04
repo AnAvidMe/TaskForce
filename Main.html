@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            TaskForce
+        </title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <section></section>
+        <div class="container">
+            <p>Will contain a big para</p>
+        </div>
+    </body>
+</html>
+<script type="text/javascript">
+    var sec = document.querySelector('section');
+    window.addEventListener('scroll',function(){
+        var v = window.scrollY;
+        sec.style.clipPath = "circle(" + v + "px at center)";
+    })
+</script>
