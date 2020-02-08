@@ -4,12 +4,38 @@
         <title>
             TaskForce
         </title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+        <link href='http://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css' />
         <link rel="stylesheet" type="text/css" href="style.css">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="menu.css">
     </head>
     <body>
-        <section></section>
-        <div class="container" data-aos="zoom-in" data-aos-duration="2000">
+        <div id="container2" style="display: none;">
+            <div class="content2">
+                <ul class="bmenu">
+                    <li><a href="#">public relations,media and marketing    </a></li>
+                    <li><a href="#">prism</a></li>
+                    <li><a href="#">web site</a></li>
+                    <li><a href="#">vcr</a></li>
+                    <li><a href="#">alumni support</a></li>
+                    <li><a href="#">passport mela</a></li>
+                    <li><a href="#">ain</a></li>
+                    <li><a href="#">voter card mela</a></li>
+                </ul>
+            </div>
+        </div>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+        <section id="sec" style="display: block;"></section>
+        <a class="btn-slice" href="#" style="z-index: 99;" onclick="toggle()">
+            <div class="top"><span>menu </span></div>
+              <div class="bottom"><span>menu</span></div>
+          </a>
+          
+          <div class="container" data-aos="zoom-in" data-aos-duration="2000">
             <div class="middle" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" >
                 <h2>Objective</h2>
             <p>The main objective of Task Force is to make the life of students at NIT Andhra Pradesh easier and provide special opportunities for the students to take part in administrative activities</p>
@@ -20,6 +46,8 @@
         </div>
     </body>
 </html>
+
+
 <script type="text/javascript">
     var sec = document.querySelector('section');
     window.addEventListener('scroll',function(){
@@ -27,7 +55,25 @@
         sec.style.clipPath = "circle(" + v + "px at center)";
     })
 </script>
+
+
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
+<script type="text/javascript">
     AOS.init();
-  </script>
+    function toggle(){
+        cont2=document.getElementById('container2');
+        sec=document.getElementById('sec');
+        if(cont2.style.display==="none")
+        {
+            cont2.style.display="block";
+            sec.style.display="none";
+            document.getElementsByTagName("body")[0].style.overflowY = "hidden";
+
+        }
+        else{
+            cont2.style.display="none"; 
+            sec.style.display="block";    
+            document.getElementsByTagName("body")[0].style.overflowY = "";
+        }
+    }
+    </script>
